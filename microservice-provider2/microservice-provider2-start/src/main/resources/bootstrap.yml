@@ -1,0 +1,26 @@
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    enabled-by-default: true
+    web:
+      base-path: /actuator
+      exposure:
+        include: '*'
+
+spring:
+  application:
+    name: microservice-provider2
+  boot:
+    admin:
+      client:
+        instance:
+          preferIp: true
+        password: admin
+        url: http://192.168.43.1:8000
+        username: admin
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.43.1:8848

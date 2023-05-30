@@ -41,13 +41,13 @@
 
         <dependency>
             <groupId>com.qinchy</groupId>
-            <artifactId>microservice-provider3-service</artifactId>
+            <artifactId>microservice-provider4-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
             <groupId>com.qinchy</groupId>
-            <artifactId>microservice-provider3-web</artifactId>
+            <artifactId>microservice-provider4-web</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 

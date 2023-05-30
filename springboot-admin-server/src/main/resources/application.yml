@@ -1,0 +1,22 @@
+server:
+  port: 8000
+
+spring:
+  application: ## 注册服务名
+    name: springboot-admin
+  security:
+    user:
+      name: admin
+      password: admin
+
+management:
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  file:
+    path: C:\Users\Administrator\logs\sba
+    name: springboot-admin.log
+
+
