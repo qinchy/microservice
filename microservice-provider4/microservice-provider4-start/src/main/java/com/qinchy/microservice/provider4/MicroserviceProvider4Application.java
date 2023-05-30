@@ -1,4 +1,4 @@
-package com.qinchy.microserviceprovider4;
+package com.qinchy.microservice.provider4;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
