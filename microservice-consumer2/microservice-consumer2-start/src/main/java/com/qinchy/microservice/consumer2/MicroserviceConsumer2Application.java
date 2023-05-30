@@ -1,13 +1,13 @@
-package com.qinchy.microservice.consumer1;
+package com.qinchy.microservice.consumer2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MicroserviceApplication {
+public class MicroserviceConsumer2Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(MicroserviceApplication.class, args);
+        SpringApplication.run(MicroserviceConsumer2Application.class, args);
     }
 
 }
