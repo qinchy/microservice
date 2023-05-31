@@ -24,3 +24,4 @@ spring:
     nacos:
       config:
         server-addr: 192.168.43.1:8848
+        fileExtension: yaml

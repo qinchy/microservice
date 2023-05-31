@@ -1,0 +1,24 @@
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    jmx:
+      exposure:
+        include: '*'
+    web:
+      exposure:
+        include: '*'
+  server:
+    port: 9084
+server:
+  port: 8084
+spring:
+  cloud:
+    sentinel:
+      eager: true
+      transport:
+        dashboard: localhost:7084
+user:
+  age: 18
+  name: qinchy
