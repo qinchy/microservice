@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -19,5 +20,17 @@ public class MicroserviceController {
     @GetMapping("/hello")
     public String test(@RequestParam(name = "name", defaultValue = "unknown user") String name) {
         return microserviceProvider1FeignClient.hello(name);
+    }
+
+    @RequestMapping("/user1")
+    @ResponseBody
+    public User user() {
+        return microserviceProvider1FeignClient.user();
+    }
+
+    @RequestMapping("/save_user")
+    @ResponseBody
+    public String saveUser(User u){
+        return microserviceProvider1FeignClient.saveUser(u);
     }
 }
