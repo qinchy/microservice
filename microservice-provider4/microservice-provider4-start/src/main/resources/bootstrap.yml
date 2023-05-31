@@ -8,6 +8,7 @@ management:
       base-path: /actuator
       exposure:
         include: '*'
+
 spring:
   application:
     name: microservice-provider4

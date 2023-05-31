@@ -30,7 +30,9 @@
         <module>microservice-consumer1</module>
         <module>microservice-consumer2</module>
 
-        <module>springboot-admin-server</module>
+        <module>springboot-adminserver</module>
+
+        <module>microservice-gateway</module>
     </modules>
 
     <dependencyManagement>
