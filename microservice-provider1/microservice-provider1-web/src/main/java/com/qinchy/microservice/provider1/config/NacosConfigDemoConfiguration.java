@@ -37,7 +37,7 @@ public class NacosConfigDemoConfiguration {
     @Bean
     public ApplicationRunner runner() {
         return args -> {
-            String dataId = "microservice-provider1.properties";
+            String dataId = "microservice-provider1.yaml";
             String group = "DEFAULT_GROUP";
             nacosConfigManager.getConfigService().addListener(dataId, group, new AbstractListener() {
                 @Override

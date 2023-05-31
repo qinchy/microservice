@@ -30,7 +30,7 @@ public class MicroserviceController {
 
     @RequestMapping("/save_user")
     @ResponseBody
-    public String saveUser(User u){
+    public String saveUser(User u) {
         return microserviceProvider1FeignClient.saveUser(u);
     }
 }

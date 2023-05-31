@@ -2,6 +2,7 @@ package com.qinchy.microservice.consumer2.demos.web.feignclient;
 
 import com.qinchy.microservice.consumer2.demos.web.User;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -19,5 +20,5 @@ public interface MicroserviceProvider1FeignClient {
 
     @RequestMapping("/save_user")
     @ResponseBody
-    public String saveUser(User u);
+    String saveUser(@RequestBody User u);
 }

@@ -4,6 +4,7 @@ package com.qinchy.microservice.provider1.web.basic;
 import com.qinchy.microservice.provider1.config.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -45,8 +46,8 @@ public class BasicController {
      */
     @RequestMapping("/save_user")
     @ResponseBody
-    public String saveUser(User user) {
-        return "user will save: name=" + user.getName() + ", age=" + user.getAge();
+    public String saveUser(@RequestBody User user) {
+        return user.getName() + ", age=" + user.getAge();
     }
 
     /**
