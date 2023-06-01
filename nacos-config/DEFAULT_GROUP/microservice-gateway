@@ -1,5 +1,5 @@
 server:
-  port: 9080
+  port: 8080
 
 spring:
   security:
@@ -52,6 +52,21 @@ spring:
           filters: # 校验
             # 去除一个前缀
             - StripPrefix=1
+        - id: microservice-consumer1
+          uri: lb://microservice-consumer1
+          predicates:
+            - Path=/microservice-consumer1/**
+          filters: # 校验
+            # 去除一个前缀
+            - StripPrefix=1
+        - id: microservice-consumer2
+          uri: lb://microservice-consumer2
+          predicates:
+            - Path=/microservice-consumer2/**
+          filters: # 校验
+            # 去除一个前缀
+            - StripPrefix=1
+
       #跨域设置
       globalcors:
         corsConfigurations:
@@ -77,7 +92,12 @@ management:
       show-details: always
   endpoints:
     enabled-by-default: true
+    jmx:
+      exposure:
+        include: '*'
     web:
       base-path: /actuator
       exposure:
         include: '*'
+  server:
+    port: 9080

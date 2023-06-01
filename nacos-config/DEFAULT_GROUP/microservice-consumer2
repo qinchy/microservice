@@ -19,3 +19,7 @@ spring:
       eager: true
       transport:
         dashboard: localhost:7086
+
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 3000

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-@FeignClient("microservice-provider1")
+@FeignClient(contextId = "basic-service", value = "microservice-provider1")
 public interface MicroserviceProvider1FeignClient {
 
     @RequestMapping("/hello")
